@@ -1,8 +1,10 @@
 function compute(event) {
 	event.preventDefault();
-	const value = parseInt(document.getElementById("principal").value || 0);
+	const valueInput = document.getElementById("principal");
+	const value = parseInt(valueInput.value || 0);
 	if (value < 1) {
 		alert("Please, type a value greater than 0");
+		valueInput.focus();
 		return;
 	}
 	const rate = document.getElementById("rate").value;
