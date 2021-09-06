@@ -4,7 +4,10 @@ function compute(event) {
 	const value = parseInt(valueInput.value || 0);
 	if (value < 1) {
 		alert("Please, type a value greater than 0");
-		valueInput.focus();
+		valueInput.value = 1;
+		setTimeout(()=> {
+			valueInput.focus();
+		}, 50)
 		return;
 	}
 	const rate = document.getElementById("rate").value;
@@ -26,4 +29,17 @@ function changeRate() {
 	const rateInput = document.getElementById("rate");
 	const rateValue = document.getElementById("rate-value");
 	rateValue.innerText = rateInput.value + "%";
+}
+
+function changeValue() {
+	const valueInput = document.getElementById("principal");
+	const value = parseInt(valueInput.value || 0);
+	if (value < 1) {
+		alert("Please, type a value greater than 0");
+		valueInput.value = 1;
+		setTimeout(()=> {
+			valueInput.focus();
+		}, 50)
+		return;
+	}
 }
