@@ -4,13 +4,47 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="container">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+            <div class="grid">
+                <div class="grid-col grid-col1">
+                    <div>Amount</div>
+                    <div>Rate</div>
+                    <div>No. of Years</div>
+                </div>
+                <div class="grid-col grid-col2">
+                    <input class="block" type="number" value="0" min="0" id="principal">
+                    <div><input onchange="changeRate()" oninput="changeRate()" type="range" value="0" min="0" max="100" id="rate"><span class="value" id="rate-value">0%</span></div>
+                    <select class="block" id="years">
+                        <option selected>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                        <option>60</option>
+                        <option>70</option>
+                        <option>80</option>
+                        <option>90</option>
+                        <option>100</option>
+                    </select>
+                </div>
+                <button onclick="compute()">Compute</button>
+            </div>
+            
+            <div id="result"></div>
+            <div class="trademark">&copy; Everyone Can Get Rich</div>
+        </div>
     </body>
 </html>
