@@ -1,5 +1,10 @@
-function compute() {
-	const value = document.getElementById("principal").value;
+function compute(event) {
+	event.preventDefault();
+	const value = parseInt(document.getElementById("principal").value || 0);
+	if (value < 1) {
+		alert("Please, type a value greater than 0");
+		return;
+	}
 	const rate = document.getElementById("rate").value;
 	const years = document.getElementById("years").value;
 	const result = document.getElementById("result");

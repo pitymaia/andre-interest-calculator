@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container">
+        <form class="container">
             <h1>Simple Interest Calculator</h1>
 
             <div class="grid">
@@ -14,7 +14,7 @@
                     <div>No. of Years</div>
                 </div>
                 <div class="grid-col grid-col2">
-                    <input class="block" type="number" value="0" min="0" id="principal">
+                    <input class="block" type="number" value="1" min="1" id="principal">
                     <div><input onchange="changeRate()" oninput="changeRate()" type="range" value="0" min="0" max="100" id="rate"><span class="value" id="rate-value">0%</span></div>
                     <select class="block" id="years">
                         <option selected>1</option>
@@ -40,11 +40,11 @@
                         <option>100</option>
                     </select>
                 </div>
-                <button onclick="compute()">Compute</button>
+                <button type="submit" onclick="compute(event)">Compute</button>
             </div>
             
             <div id="result"></div>
             <div class="trademark">&copy; Everyone Can Get Rich</div>
-        </div>
+        </form>
     </body>
 </html>
